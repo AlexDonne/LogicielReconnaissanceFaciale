@@ -1,6 +1,3 @@
-## Author: alexd <alexd@ALEX>
-## Created: 2016-12-28
-
 function convertirBaseEnGray ()
   #On va dans le répertoire contenant toutes les images de la base de données
   cd("./Visages"); 

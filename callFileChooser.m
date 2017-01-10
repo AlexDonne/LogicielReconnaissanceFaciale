@@ -1,5 +1,3 @@
-## Author: alexd <alexd@ALEX>
-## Created: 2016-12-28
 
 function callFileChooser ()
   global AComp; 

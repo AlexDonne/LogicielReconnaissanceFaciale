@@ -1,5 +1,3 @@
-## Author: Nahel Chazot <nachazot1@c21-42>
-## Created: 2017-01-03
 
 function choixNombreResults ()
   global nbResults; 

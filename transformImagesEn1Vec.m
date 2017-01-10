@@ -1,9 +1,7 @@
-## Author: alexd <alexd@ALEX>
-## Created: 2016-12-28
-
 function transformImagesEn1Vec ()
   global nbImages; 
-  global M; 
+  global M;
+  global histM; 
   #On va dans le dossier Visages2 où il y a toutes les images grisées
   cd("Visages2"); 
   #On liste les fichiers gif du répertoire
@@ -25,4 +23,11 @@ function transformImagesEn1Vec ()
   endfor
   #On revient dans le répertoire principal
   cd("..");
+  #On remplit histM, qui contient les histogrammes de chaque vecteur-colonne de M
+  
+  histM=zeros(length(djpg)+length(dgif),255); 
+  for i=1:length(djpg)+length(dgif)
+    histM(i,:)=hist(M(:,i),255);
+  endfor
+  
 endfunction

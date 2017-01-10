@@ -1,7 +1,4 @@
 
-## Author: alexd <alexd@ALEX>
-## Created: 2017-01-03
-
 function  choixNiveauDetails ()
   global niveauDetails; 
   global nbImages; 
