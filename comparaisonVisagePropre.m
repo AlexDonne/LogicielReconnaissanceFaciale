@@ -36,7 +36,7 @@ function  comparaisonVisagePropre ()
   [D,C]=sort(D); 
   disp(D);
   # Affichage dans la panel, on décale la position à gauche à chaque image
-  panelResultats= uipanel("Parent", f, "Title", "Images les plus proches", "position", [0.0,.0,1,.45],"backgroundcolor","red","fontweight","bold","fontangle","oblique","titleposition","centertop","foregroundcolor","white"); 
+  panelResultats= uipanel("Parent", f, "Title", "Images les plus proches", "position", [0.0,.0,1,.45],"backgroundcolor","red","fontweight","bold","fontangle","oblique","titleposition","centertop"); 
   for i=1:nbResults
     #S'il n'y a qu'une image à afficher, la position est particulière, on ne peut pas grossir un peu l'image
     if (nbResults==1) 

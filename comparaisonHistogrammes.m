@@ -18,11 +18,12 @@ function comparaisonHistogrammes ()
   %histM=hist(M,255);
   
   # On calcule la norme de la différence entre chaque ligne de histM et histAComp, un par ligne
-  D=norm(histM-histAComp,"rows")'; 
-  
+  %D=norm(histM-histAComp,"rows")'; 
+  D=distChiSqu(histM,histAComp); 
+
   # On trie D, et on récupère les indices associés aux normes dans C
   [D,C]=sort(D);
-  disp(D);
+
   panelResultats= uipanel("Parent", f, "Title", "Images les plus proches", "position", [0.0,.0,1,.45],"backgroundcolor","red","fontweight","bold","fontangle","oblique","titleposition","centertop","foregroundcolor","white"); 
   for i=1:nbResults
     if (nbResults==1) 

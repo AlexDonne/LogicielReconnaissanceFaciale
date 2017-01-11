@@ -25,7 +25,7 @@ choix= uicontrol(f, "style", "push", "position", [900,750,270,35],"string", "Cho
 panelImageChoisie= uipanel("Parent", f, "Title", "Image choisie", "position", [.5,.47,.4,.4],"backgroundcolor","white","foregroundcolor","blue"); 
 
 #Texte 
-choixTechnique = uicontrol(f,"style","text","string","Technique de comparaison :","position",[100,700,270,35],"fontsize",12,"fontweight","bold","foregroundcolor","blue");
+choixTechnique = uicontrol(f,"style","text","string","Technique de comparaison :","position",[100,700,270,35],"fontsize",12,"fontweight","bold","foregroundcolor","black");
 
 #Bouton pour appeler la technique de visage moyen
 choixVisageMoyen= uicontrol(f, "style", "push","string", "Visage moyen", "position", [200,650,250,35],"callback",@comparaisonVisageMoyen,"fontsize", 10,"foregroundcolor","red");
