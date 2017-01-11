@@ -11,7 +11,6 @@ function  comparaisonVisageMoyen ()
   #On calcule la norme entre chaque visage de la base et le visage choisi, on met les résultats dans une matrice D
   D=norm(double(M)-double((I2Vector(AComp))),"cols"); 
   [D,C]=sort(D); 
-  
   # Affichage dans la panel, on décale la position à gauche à chaque image
   panelResultats= uipanel("Parent", f, "Title", "Images les plus proches", "position", [0.0,.0,1,.45],"backgroundcolor","red","fontweight","bold","fontangle","oblique","titleposition","centertop","foregroundcolor","white"); 
   for i=1:nbResults

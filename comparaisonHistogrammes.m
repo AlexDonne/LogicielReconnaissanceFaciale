@@ -23,7 +23,6 @@ function comparaisonHistogrammes ()
 
   # On trie D, et on récupère les indices associés aux normes dans C
   [D,C]=sort(D);
-
   panelResultats= uipanel("Parent", f, "Title", "Images les plus proches", "position", [0.0,.0,1,.45],"backgroundcolor","red","fontweight","bold","fontangle","oblique","titleposition","centertop","foregroundcolor","white"); 
   for i=1:nbResults
     if (nbResults==1) 

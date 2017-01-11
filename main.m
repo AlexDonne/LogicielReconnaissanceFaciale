@@ -8,12 +8,12 @@ global nbResults=5;
 # Le niveau de détail appliqué à la technique du visage propre, initialisé à 5 si l'utilisateur n'en choisit pas
 global niveauDetails=5;
 global nbImages;   
-global histM;
 
 #convertirBaseEnGray(); # Convertit les images de la base en gris si besoin
 transformImagesEn1Vec(); #Transforme toutes les images en 1 vecteur colonne, qui est ajouté à M, matrice contenant tous ces vecteurs colonnes
 # Remplit aussi la matrice histM, pour ne pas avoir à le refaire à chaque fois que l'utilisateur clique dessus
-#Fonctions faites dès le début pour ne pas avoir à les refaire si l'utilisateur change de méthode
+# Remplit aussi VecPropre, qui est la matrice M avec des vecteurs "purifiés"
+#Fonction faite dès le début pour ne pas avoir à les refaire si l'utilisateur change de méthode
 
 #Fenêtre principale
 f= figure("Name", "Systeme de reconnaissance faciale", "Menubar", "none", "Position", [300,0,1300,800], "Color","blue");

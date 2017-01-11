@@ -2,6 +2,9 @@ function transformImagesEn1Vec ()
   global nbImages; 
   global M;
   global histM; 
+  global VecProp; 
+  global niveauDetails; 
+  global u; 
   #On va dans le dossier Visages2 où il y a toutes les images grisées
   cd("Visages2"); 
   #On liste les fichiers gif du répertoire
@@ -23,8 +26,16 @@ function transformImagesEn1Vec ()
   endfor
   #On revient dans le répertoire principal
   cd("..");
-  #On remplit histM, qui contient les histogrammes de chaque vecteur-colonne de M
   
+  [H,L]=size(M);
+  [u,s,v]=svd(M,"econ");
+   # Les vecteurs de la matrice u ont la particularité d’être ordonnés dans un ordre d’importance décroissante
+  # pour les caractéristiques des visages 
+  #On met dans une nouvelle matrice tous les vecteurs colonnes de M en les "purifiant", 
+  #avec la même technique que pour AComp dans fonction ComparaisonVisagePropre
+  VecProp=((M'*u(:,1:niveauDetails))*u(:,1:niveauDetails)')'; 
+  
+  #On remplit histM, qui contient les histogrammes de chaque vecteur-colonne de M
   histM=zeros(length(djpg)+length(dgif),255); 
   for i=1:length(djpg)+length(dgif)
     histM(i,:)=hist(M(:,i),255);
